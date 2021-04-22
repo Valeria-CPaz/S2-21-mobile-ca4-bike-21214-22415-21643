@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">S2-21-mobile-ca4-bike-21214-22415-21643</string>
+    <string name="app_name">Bike and Weather</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="log_in">log in</string>
+    <string name="not_registered_yet_click_here">Not registered yet? Click here</string>
+    <string name="register">register</string>
+    <string name="welcome_to_bike_and_weather">Welcome to Bike and Weather</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="something_went_wrong">Something went wrong</string>
 </resources>
