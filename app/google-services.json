@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "927390741716",
+    "project_id": "s2-21-mobile",
+    "storage_bucket": "s2-21-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927390741716:android:0146beef68029d9fc5b741",
+        "android_client_info": {
+          "package_name": "com.valeriapaz.s2_21_mobile_ca4_bike_21214_22415_21643"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927390741716-ib5a8u4hsa5iik9blv0mdh2l6hpr2h8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsFxHMdC9yYxa7vQYRneWfWkUC2HBEyh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927390741716-ib5a8u4hsa5iik9blv0mdh2l6hpr2h8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

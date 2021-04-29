@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_dublin_weather.*
+import kotlinx.android.synthetic.main.activity_weather.*
 import org.json.JSONObject
 import java.net.URL
 import java.text.SimpleDateFormat
@@ -14,13 +14,14 @@ import java.util.*
 
 class DublinWeatherActivity : BaseActivity() {
 
-    val CITY = "Dublin,IE"
+    val CITY: String = "Dublin,IE"
     // Used of API key
-    val API = "a12c3fe55e4ee95592dab383cfbefde5"
+    val API: String = "a12c3fe55e4ee95592dab383cfbefde5"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dublin_weather)
+        setContentView(R.layout.activity_weather)
 
         // Button Home handle
         btnHome.setOnClickListener {

@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
 
     <EditText
-        android:id="@+id/etUsername"
+        android:id="@+id/etEmailRegister"
         android:layout_width="250dp"
         android:layout_height="35dp"
         android:layout_marginTop="16dp"
@@ -65,8 +65,8 @@
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:background="@drawable/custom_input"
-        android:hint="@string/username"
-        android:inputType="textPersonName"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
         android:textColorHint="@color/green_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etLastName" />
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/etPasswordRegister"
         android:layout_width="250dp"
         android:layout_height="35dp"
         android:layout_marginTop="16dp"
@@ -88,18 +88,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmailRegister" />
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="register"
+        android:textColor="@color/white"
         app:backgroundTint="@color/green_base"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordRegister"
         app:layout_constraintVertical_bias="0.108" />
+
+    <TextView
+        android:id="@+id/tvRegistrarion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
