@@ -86,5 +86,56 @@ class MapsActivity : BaseActivity(), OnMapReadyCallback {
     }
 
 
+//val eventList = ArrayList<Events>()
+//
+//try {
+//    // Load data
+//    val jsonString = loadJsonFromAsset(filename, context)
+//    val json = JSONObject(jsonString)
+//    val events = json.getJSONArray("events")
+//    //val placeObj =events.optJSONObject("place")
+//    //val locationObj = placeObj.getJSONObject("location")
+//
+//    (0 until events.length()).mapTo(destination = eventList) {
+//        Events(
+//            val placeObj =events.optJSONObject(it).getJSONObject("place")
+//        val locationObj = placeObj.getJSONObject("location")
+//
+//        events.getJSONObject(it).getString("id"),
+//        events.getJSONObject(it).getString("name"),
+//        events.getJSONObject(it).getString("attending_count"),
+//        events.getJSONObject(it).getString("coverPicture"),
+//        events.getJSONObject(it).getString("description"),
+//        events.getJSONObject(it).getString("endTime"),
+//        events.getJSONObject(it).getString("startTime"),
+//        events.getJSONObject(it).getString("type"),
+//        events.getJSONObject(it).getString("profilePicture"),
+//        Place(
+//            placeObj.getString("id"),
+//            placeObj.getString("name"),
+//            Location(
+//                locationObj.getString("city"),
+//                //   locationObj.getString("city_id").toInt(),
+//                //   locationObj.getString("name"),
+//                locationObj.getString("country"),
+//                //  locationObj.getString("country_code"),
+//                locationObj.getString("latitude").toFloat(),
+//                locationObj.getString("longitude").toFloat(),
+//                //  locationObj.getString("region"),
+//                // locationObj.getString("region_id").toInt(),
+//                locationObj.getString("state"),
+//                locationObj.getString("street"),
+//                locationObj.getString("zip")
+//            )
+//        )
+//        )
+//    }
+//} catch (e: JSONException) {
+//    e.printStackTrace()
+//}
+//
+//return eventList
+//}
+
 
 

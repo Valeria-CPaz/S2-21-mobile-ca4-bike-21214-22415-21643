@@ -1,7 +1,5 @@
 package com.valeriapaz.s2_21_mobile_ca4_bike_21214_22415_21643
 
-import android.os.Bundle
-
 // Data class that holds Dublin and Paris bikes variables references
 data class BikesModels(
     val address: String,
@@ -11,10 +9,12 @@ data class BikesModels(
     val last_update: Long,
     val name: String,
     val status: String,
-    val positionLL: List<Position>
+//    val position: String
 )
 
-data class Position(val lat: Double, val lng: Double)
+data class Position(
+    val position : Double )
+
 
 
 

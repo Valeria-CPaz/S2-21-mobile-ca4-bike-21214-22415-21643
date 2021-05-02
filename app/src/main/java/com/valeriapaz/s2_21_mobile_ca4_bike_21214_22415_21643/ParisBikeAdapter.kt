@@ -19,9 +19,9 @@ class ParisBikeAdapter(val bikesListParis: List<BikesModels>) :
         return ParisBikeHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ParisBikeHolder, position: Int) {
+    override fun onBindViewHolder(holder: ParisBikeHolder, position2: Int) {
 
-        val bike = bikesListParis[position]
+        val bike = bikesListParis[position2]
 
         holder.itemView.tvStationNames.text = bike.name
         holder.itemView.tvBikesAvailable.text = bike.available_bikes.toString() + " available"

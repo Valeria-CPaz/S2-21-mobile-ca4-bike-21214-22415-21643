@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_j_c_decaux_bike.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.coroutines.CoroutineScope
@@ -11,6 +12,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class LoginActivity : BaseActivity() {
@@ -35,6 +39,7 @@ class LoginActivity : BaseActivity() {
         }
 
     }
+
 
     // checking if the user is logged in when the App is launched
     override fun onStart() {
@@ -82,5 +87,6 @@ class LoginActivity : BaseActivity() {
 
     }
 
-
 }
+
+
