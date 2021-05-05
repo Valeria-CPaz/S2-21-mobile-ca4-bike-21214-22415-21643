@@ -23,6 +23,12 @@ class JCDecauxBikeActivity : BaseActivity() {
             }
         }
 
+        btnGoMapParis.setOnClickListener {
+            Intent(this, ParisMapsActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
         ParisBikesApi().getBikes().enqueue(object: Callback<List<BikesModels>> {
             override fun onResponse(
                 call: Call<List<BikesModels>>,

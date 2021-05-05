@@ -94,14 +94,40 @@
         android:text="@string/log_in"
         android:textColor="@color/white"
         app:backgroundTint="@color/green_base"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/tvRegistrationMainPage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/evPasswordInput" />
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordInput" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvGoogleMsg"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="4dp"
+        android:text="Sign in with Google"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegisterGoogle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoRegister" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btnRegisterGoogle"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoRegister"
+        app:layout_constraintVertical_bias="0.836" />
+
+    <TextView
+        android:id="@+id/tvRegistrationMainPage"
         android:layout_width="120sp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -110,15 +136,14 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btnGoRegister"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnGoRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="155dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="124dp"
         android:text="@string/register"
         android:textColor="@color/white"
         app:backgroundTint="@color/green_base"

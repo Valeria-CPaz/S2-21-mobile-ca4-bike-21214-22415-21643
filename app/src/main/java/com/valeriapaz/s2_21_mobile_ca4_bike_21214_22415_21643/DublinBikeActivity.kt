@@ -23,8 +23,8 @@ class DublinBikeActivity : BaseActivity() {
             }
         }
 
-        btnGoMap.setOnClickListener {
-            Intent(this, MapsActivity::class.java).also {
+        btnGoMapDublin.setOnClickListener {
+            Intent(this, DublinMapsActivity::class.java).also {
                 startActivity(it)
             }
         }
