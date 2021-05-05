@@ -26,7 +26,7 @@
         android:id="@+id/tvBikesAvailable"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="4dp"
         android:text="@string/bikes_available"
         android:textAlignment="textEnd"
@@ -37,12 +37,13 @@
         app:layout_constraintStart_toEndOf="@+id/tvStationNames"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ImageView
         android:id="@+id/vectorBike"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tvStationNames"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +61,7 @@
         app:layout_constraintHorizontal_bias="0.811"
         app:layout_constraintStart_toEndOf="@+id/tvBikesAvailable"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_favourites" />
+        app:srcCompat="@drawable/ic_fav_green_base" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
