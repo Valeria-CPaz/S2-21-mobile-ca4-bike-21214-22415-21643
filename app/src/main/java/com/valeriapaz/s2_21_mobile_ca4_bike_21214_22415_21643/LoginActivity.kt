@@ -19,9 +19,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
 class LoginActivity : BaseActivity() {
@@ -37,7 +34,8 @@ class LoginActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         auth = FirebaseAuth.getInstance()
-//        auth.signOut()
+        auth.signOut()
+        auth2.signOut()
 
         val username = etFirstName
 
@@ -86,6 +84,7 @@ class LoginActivity : BaseActivity() {
                 val account = task.getResult(ApiException::class.java)!!
                 Log.d("TAG", "firebaseAuthWithGoogle:" + account.id)
                 firebaseAuthWithGoogle(account.idToken!!)
+
             } catch (e: ApiException) {
                 // Google Sign In failed, update UI appropriately
                 Log.w("TAG", "Google sign in failed", e)
@@ -95,13 +94,13 @@ class LoginActivity : BaseActivity() {
 
     private fun firebaseAuthWithGoogle(idToken: String) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
-        auth.signInWithCredential(credential)
+        auth2.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("TAG", "signInWithCredential:success")
-                    val user = auth.currentUser
-                    updateUI(user)
+                    val currentUser = auth2.currentUser
+                    updateUI(currentUser)
                 } else {
                     // If sign in fails, display a message to the user.
                     Toast.makeText(this, "Authentication failure", Toast.LENGTH_SHORT).show()
@@ -111,8 +110,10 @@ class LoginActivity : BaseActivity() {
             }
     }
 
-    private fun updateUI(user: FirebaseUser?) {
-
+    fun updateUI(currentUser: FirebaseUser?) {
+        Intent(this, MenuActivity::class.java).also {
+            startActivity(it)
+        }
     }
 
 
@@ -120,6 +121,9 @@ class LoginActivity : BaseActivity() {
     override fun onStart() {
         super.onStart()
         checkLoggedInState()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        updateUI(currentUser)
     }
 
     // function to login
@@ -135,7 +139,11 @@ class LoginActivity : BaseActivity() {
                     }
                 } catch (exception: Exception) {
                     withContext(Dispatchers.Main) {
-                        Toast.makeText(this@LoginActivity, exception.message, Toast.LENGTH_SHORT)
+                        Toast.makeText(
+                            this@LoginActivity,
+                            exception.message,
+                            Toast.LENGTH_SHORT
+                        )
                             .show()
                     }
                 }
@@ -151,7 +159,7 @@ class LoginActivity : BaseActivity() {
     }
 
     // checking the log status
-    private fun checkLoggedInState() {
+    fun checkLoggedInState() {
         if (auth.currentUser == null) {
 //            tvLog.text = getString(R.string.login_error)
         } else {
@@ -164,6 +172,7 @@ class LoginActivity : BaseActivity() {
 
 
 }
+
 
 
 

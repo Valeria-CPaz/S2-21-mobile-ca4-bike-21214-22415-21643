@@ -116,7 +116,7 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/btnRegisterGoogle"
-        android:layout_width="105dp"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:textAlignment="center"
