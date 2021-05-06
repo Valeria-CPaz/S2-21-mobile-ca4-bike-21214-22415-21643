@@ -28,14 +28,14 @@ class LoginActivity : BaseActivity() {
     lateinit var gso: GoogleSignInOptions
     lateinit var googleSignInClient: GoogleSignInClient
 
-    private val auth2: FirebaseAuth = FirebaseAuth.getInstance()
+//    private val auth2: FirebaseAuth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         auth = FirebaseAuth.getInstance()
         auth.signOut()
-        auth2.signOut()
+//        auth2.signOut()
 
         val username = etFirstName
 
@@ -94,13 +94,13 @@ class LoginActivity : BaseActivity() {
 
     private fun firebaseAuthWithGoogle(idToken: String) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
-        auth2.signInWithCredential(credential)
+        auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("TAG", "signInWithCredential:success")
-                    val currentUser = auth2.currentUser
-                    updateUI(currentUser)
+                    val user = auth.currentUser
+                    updateUI(user)
                 } else {
                     // If sign in fails, display a message to the user.
                     Toast.makeText(this, "Authentication failure", Toast.LENGTH_SHORT).show()
@@ -110,10 +110,8 @@ class LoginActivity : BaseActivity() {
             }
     }
 
-    fun updateUI(currentUser: FirebaseUser?) {
-        Intent(this, MenuActivity::class.java).also {
-            startActivity(it)
-        }
+    fun updateUI(user: FirebaseUser?) {
+
     }
 
 
