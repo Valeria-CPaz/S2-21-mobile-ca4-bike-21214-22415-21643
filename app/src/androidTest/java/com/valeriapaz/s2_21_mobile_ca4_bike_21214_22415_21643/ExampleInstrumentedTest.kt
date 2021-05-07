@@ -1,5 +1,24 @@
 package com.valeriapaz.s2_21_mobile_ca4_bike_21214_22415_21643
 
+/*
+
+DORSET COLLEGE
+
+OBJECT ORIENTED PROGRAMING - CA3
+
+Lecturer: John Rowley
+
+STUDENTS:
+Marcus Vinicius de Freitas Moura – 22415
+Valeria Cardoso da Paz – 21214
+Alexson Oliveira Silva – 21643
+
+
+
+
+ */
+
+
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
